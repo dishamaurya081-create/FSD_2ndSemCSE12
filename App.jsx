@@ -1,16 +1,19 @@
-import "./App.css";
-import StudentCard from "./StudentCard.jsx";
-
-function App() {
-  return (
-    <div>
-      <h1>Student Card</h1>
-      <StudentCard name="Alice" grade="A" marks={85} />
-      <StudentCard name="Bob" grade="B" marks={75} />
-      <StudentCard name="Charlie" grade="A" marks={86} />
+import {useState} from 'react';
+function App(){
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1);
+  };
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  return(
+    <div classname="App">
+      <h1>Counter App</h1>
+      <h2>Count: {count}</h2>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
     </div>
-  );
-
+  )
 }
-
 export default App;
