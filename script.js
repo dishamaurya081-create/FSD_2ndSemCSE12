@@ -18,15 +18,14 @@ document.getElementById("bgColorBtn").addEventListener("click",function(){
     document.body.style.fontFamily="Arial, sans-serif";
 });
 //size of font increases by 5px on each click if it is less than 100px, otherwise it resets to 100px
- document.getElementById("fontSizeBtn").addEventListener("click",function(){
-    while(click>0){
-    if(heading.style.fontSize<"10px"){
-    heading.style.fontSize+="20px";
+document.getElementById("fontSizeBtn").addEventListener("click", function () {
+    let currentSize = parseInt(window.getComputedStyle(heading).fontSize);
+
+    if (currentSize < 100) {
+        heading.style.fontSize = (currentSize + 5) + "px";
+    } else {
+        heading.style.fontSize = "100px";
     }
-    else{
-        heading.style.fontSize="40px";
-    }
-}
 });
 let isVisible=true;
 document.getElementById("toggleParaBtn").addEventListener("click",function(){
