@@ -1,0 +1,26 @@
+/* Simple styling */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#heading {
+    color: darkblue;
+}
+
+#inputText {
+    padding: 5px;
+    width: 200px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#para {
+    margin-top: 15px;
+}

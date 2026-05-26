@@ -1,0 +1,96 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Background (kept as you wanted) */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main wrapper */
+div {
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 36px;
+  color: #00e5ff;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+/* Card container spacing */
+div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== STUDENT CARD ===== */
+.student-card {
+  width: 330px;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #121c2b, #1b2a3a);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.student-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 229, 255, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+}
+
+/* Neon top glow bar */
+.student-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #00e5ff, #7c4dff);
+}
+
+/* Name */
+.student-card h2 {
+  font-size: 22px;
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.student-card p {
+  font-size: 15px;
+  color: #cfd8dc;
+  margin: 6px 0;
+}
+
+/* Grade badge */
+.grade {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0f2027;
+  background: linear-gradient(90deg, #00e5ff, #7c4dff);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+}
